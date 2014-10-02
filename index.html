@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>New tab</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <style>
       html,
       body {
@@ -115,6 +116,33 @@
         font-weight: 200;
       }
 
+      .PrettyNewTab-speedDial {
+        position: absolute;
+        margin: 0;
+        bottom: 6vh;
+        left: calc(50% - 8rem);
+        text-align: center;
+        list-style-type: none;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+        .PrettyNewTab-speedDialItem {
+          display: inline-block;
+          margin-right: 2rem;
+          font-size: 3rem;
+          overflow: hidden;
+          vertical-align: middle;
+        }
+        .PrettyNewTab-speedDialItem a {
+          color: #333;
+          text-shadow: none;
+        }
+        .PrettyNewTab-speedDialItem:last-child {
+          margin-right: 0;
+        }
+
       .PrettyNewTab-backgroundCredit {
         text-decoration: none
       }
@@ -159,6 +187,17 @@
     <div class="PrettyNewTab-stretch PrettyNewTab-backgroundOverlay"></div>
 
     <div class="PrettyNewTab-stretch PrettyNewTab-ui">
+      <ul class="PrettyNewTab-speedDial">
+        <li class="PrettyNewTab-speedDialItem">
+          <a href="http://github.com/madx"><i class="fa fa-github"></i></a>
+        </li>
+        <li class="PrettyNewTab-speedDialItem">
+          <a href="http://pinboard.com/"><i class="fa fa-twitch"></i></a>
+        </li>
+        <li class="PrettyNewTab-speedDialItem">
+          <a href="http://boardgamegeek.com/"><i class="fa fa-codepen"></i></a>
+        </li>
+      </ul>
       <time class="js-PrettyNewTab-time PrettyNewTab-time PrettyNewTab-pin PrettyNewTab-pin--top-right"></time>
 
       <footer class="small PrettyNewTab-footer">
