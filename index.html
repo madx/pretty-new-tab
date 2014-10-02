@@ -122,6 +122,42 @@
         text-decoration: underline
       }
 
+      .PrettyNewTab-ui {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .PrettyNewTab-settings {
+        position: relative;
+        background-color: rgba(0, 0, 0, .9);
+        box-shadow: 0 0 .5rem rgba(0, 0, 0, .9);
+        border-radius: .5rem;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+      }
+        .PrettyNewTab-settings ul {
+          padding: 1rem;
+          margin: 0;
+        }
+
+        .PrettyNewTab-settings-close {
+          display: block;
+          position: absolute;
+          top: .5rem;
+          right: .5rem;
+          text-decoration: none;
+          font-weight: bold;
+          text-shadow: none;
+          color: white;
+          background: none;
+          line-height: 1rem;
+          width: 1rem;
+          overflow: hidden;
+        }
+
       .PrettyNewTab-footer {
 
       }
@@ -161,7 +197,34 @@
     <div class="PrettyNewTab-stretch PrettyNewTab-ui">
       <time class="js-PrettyNewTab-time PrettyNewTab-time PrettyNewTab-pin PrettyNewTab-pin--top-right"></time>
 
+      <div class="PrettyNewTab-settings">
+        <a class="js-PrettyNewTab-settings-close PrettyNewTab-settings-close" href="#">×</a>
+        <ul>
+          <li>
+            <input type="checkbox" id="PrettyNewTab-settings-overlay" />
+            <label for="PrettyNewTab-settings-overlay">Radial overlay</label>
+          </li>
+          <li>
+            <input type="checkbox" id="PrettyNewTab-settings-cycleBackgrounds" />
+            <label for="PrettyNewTab-settings-cycleBackgrounds">Cycle backgrounds</label>
+          </li>
+          <li>
+            <label for="PrettyNewTab-settings-cycleBackgrounds">Cycle interval</label>
+            <input type="text" id="PrettyNewTab-settings-cycleInterval" value="30s" size="2" />
+          </li>
+          <li>
+            <input type="checkbox" id="PrettyNewTab-settings-imageList" value="" />
+            <label for="PrettyNewTab-settings-imageList">Use external image list</label>
+          </li>
+          <li>
+            <label for="PrettyNewTab-settings-imageListUrl">Image list URL</label>
+            <input type="text" id="PrettyNewTab-settings-imageSource" value="" />
+          </li>
+        </ul>
+      </div>
+
       <footer class="small PrettyNewTab-footer">
+
         <div class="PrettyNewTab-pin PrettyNewTab-pin--bottom">
           <span class="PrettyNewTab-footer-txt">Made with ♥︎ by</span>
           <a class="PrettyNewTab-footer-link"href="http://putaindecode.io">putaindecode</a>
@@ -175,6 +238,8 @@
           <a class="PrettyNewTab-footer-link" href="https://github.com/putaindecode/pretty-new-tab/issues">Contribute</a>
           <span class="PrettyNewTab-separator">|</span>
           <a class="PrettyNewTab-footer-link" href="https://github.com/putaindecode/pretty-new-tab/issues/new">Report a bug</a>
+          <span class="PrettyNewTab-separator">|</span>
+          <a class="js-PrettyNewTab-settingsLink PrettyNewTab-footer-link" href="">⛭</a>
         </div>
       </footer>
     </div>
